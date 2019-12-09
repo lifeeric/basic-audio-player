@@ -1,0 +1,43 @@
+<body>
+    
+
+    <!-- first project -->
+    <div class="wrapper">
+        <div clas="player">
+
+            <audio class="music_player" controls>
+                <source src="http://k007.kiwi6.com/hotlink/tfaw4el9c5/Moon_River_Jazz.mp3" />
+            </audio>
+
+            <input type="image" src="/images/Play.png" onclick="play_aud()" id="play" />
+            <input type="image" src="/images/pause.png" onclick="pause_aud()" id="stop" />
+            <input type="image" src="/images/stop.png" onclick="stop_aud()" id="stop" />
+            <img src="/images/vol.png" alt="/images/Vol" />
+            <form action="#">
+            <p class="range-field">
+                <input type="range" id="vol" min="0" onchange="change_vol()" step="0.5" max="1" />
+            </p>
+            </form>
+        </div>
+    </div>
+
+    <!-- second project -->
+    <div class="container">
+
+        <div class="prog">
+            <div class="prog-bar"></div>
+        </div>
+
+        <audio id="audio" ontimeupdate="updateBar()" src="http://k007.kiwi6.com/hotlink/tfaw4el9c5/Moon_River_Jazz.mp3"></audio>
+        
+        <br />
+        
+        <span id="current-time"></span>/<span id="duration"></span>
+        <br />
+        
+        <button id="audioControl" onclick="togglePlaying()">Play</button>
+    
+    </div>
+    <!-- JS FILE -->
+    <script src="/main-bundle.js"></script>
+</body>
